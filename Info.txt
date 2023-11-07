@@ -1,0 +1,5 @@
+Student_id : 2313110583
+Student Name : Hansira Khawmeesri
+Major : IT
+Level : 1
+Faculty : Information Technology
