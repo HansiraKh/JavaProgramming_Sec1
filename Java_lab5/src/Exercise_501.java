@@ -11,7 +11,7 @@ public class Exercise_501 {
 		}
 		else{
 		String firstname =	fullname.substring(0,space);
-		String lastname =	fullname.substring(space,fullname.length());
+		String lastname = fullname.substring(space,fullname.length());
 		System.out.println("First Name: "+firstname);
 		System.out.print("Last Name: "+lastname);
 		}
