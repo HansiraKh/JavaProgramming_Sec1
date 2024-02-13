@@ -1,25 +1,25 @@
+public class Rectangle2 implements Shape2{
+	private double width;
+	private double length;
 
-public class Rectangle2 implements Shape2 {
-	
-	private double width,length;
-	
-	Rectangle2(double width,double lenght){
+	Rectangle2 (double width, double length){
 		this.width = width;
-		this.length = lenght;
+		this.length = length;
 	}
-	@Override
-	public double getArea() {
-		return this.width * this.length;
-	}
+
 	public double getWidth() {
 		return this.width;
 	}
-	public double getLenght() {
+
+	public double getLength() {
 		return this.length;
 	}
-	public String toString() {
-		return "Rectangle2[width= "+this.width+",lenght= "+this.length/*+","+super.toString()+*/+"]";
+
+	public double getArea() {
+		return this.width*this.length;
 	}
 
-
+	public String toString() {
+		return "Rectangle[width="+this.width+",length="+this.length+"]";
+	}
 }

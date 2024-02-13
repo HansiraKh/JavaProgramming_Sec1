@@ -1,26 +1,29 @@
-
 public class Rectangle extends shape {
-	
+
 	private double width;
-	private double lenght;
-	
-	Rectangle(double width,double lenght,String color){
-		super(color);
+	private double length;
+
+	Rectangle (double width, double length, String color){
+		super(color); //call attribute color from Constructor method in Class Shape
 		this.width = width;
-		this.lenght = lenght;
+		this.length = length;
 	}
-	@Override
-	public double getArea() {
-		return this.width * this.lenght;
-	}
-	public String toString() {
-		return "Rectangle[width= "+this.width+",lenght= "+this.lenght+","+super.toString()+"]";
-	}
+
 	public double getWidth() {
 		return this.width;
 	}
-	public double getLenght() {
-		return this.lenght;
+
+	public double getLength() {
+		return this.length;
 	}
 
+	@Override
+	public double getArea() {
+		return this.width*this.length; //implement getArea() method from abstract method from class Shape
+	}
+
+	@Override
+	public String toString() {
+		return "Rectangle[width="+this.width+",length="+this.length+","+super.toString();
+	}
 }
