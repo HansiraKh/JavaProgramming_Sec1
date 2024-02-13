@@ -1,30 +1,35 @@
+import java.util.*;
 import java.io.*;
-import java.util.Scanner;
 public class Lab1204 {
 
-	public static void main(String[] args) throws IOException {
-		BufferedReader readFile = new BufferedReader(new FileReader("d://txtFile//Bookdata.txt"));
+	public static void main(String[] args) throws IOException{
 		Scanner input = new Scanner(System.in);
-		System.out.print("Enter rating of books: ");
-		String rating = input.next();
-		String tmp=""; 
-		int i =1;
-		Line();
-		while((tmp=readFile.readLine())!=null){
-			String[] data= tmp.split("\t");
-			if(data[3]>=(rating)) {
-				System.out.println("book"+data[4]+data[0]+"by"+data[1]+"("+data[3]+")reviews");
-				i++;
+		System.out.print("Enter rating of books : ");
+		double inputRating = input.nextDouble();
+		int numBook = 1, countBook = 0;
+		System.out.println("------------------------------------------------------------------------");
+
+		BufferedReader readFile = new BufferedReader(new FileReader("d://txtFile//BookData.txt"));
+		String tmp = "";
+		while((tmp = readFile.readLine())!=null) {
+			String[] data = tmp.split("\t");
+
+			String titleBook = data[0];
+			String nameAuthor = data[1];
+			double rating = Double.parseDouble(data[2]);
+			int peopleRating = Integer.parseInt(data[3]);
+
+			if(rating >= inputRating) {
+				System.out.println("Book"+" "+numBook+" : "+titleBook+" write by "+nameAuthor+" ("+peopleRating+") reviews");
+				countBook++;
 			}
-				
-			
+			numBook++;
 		}
-		Line();
-		System.out.println();
-		System.out.print("There are "+i+"book get rating more than "+rating);
-	}
-	public static void Line() {
-		System.out.print("---------------------------------------------");
+		readFile.close();
+
+		System.out.println("------------------------------------------------------------------------");
+		System.out.println("There are "+countBook+" book get rating more than "+inputRating);
+
 	}
 
 }
