@@ -22,7 +22,7 @@ public class Lab1204 {
 			if(rating >= inputRating) {
 				System.out.println("Book"+" "+numBook+" : "+titleBook+" write by "+nameAuthor+" ("+peopleRating+") reviews");
 				countBook++;
-			}
+			} 
 			numBook++;
 		}
 		readFile.close();

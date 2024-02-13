@@ -23,7 +23,7 @@ public class Lab1205 {
 			
 
 	}
-	public static String Level(String id) {
+ 	public static String Level(String id) {
 		int year = 22-Integer.parseInt(id.substring(0,2));
 		
 			return year+"th" ;

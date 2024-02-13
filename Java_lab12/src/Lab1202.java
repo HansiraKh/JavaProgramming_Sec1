@@ -17,7 +17,7 @@ public class Lab1202 {
 				break;
 			}
 			else 
-				{System.out.print("The data not found");
+			 	{System.out.print("The data not found");
 				break;}
 			
 		}

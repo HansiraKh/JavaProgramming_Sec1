@@ -15,7 +15,7 @@ public class Example1201 {
 			System.out.println(fname+" "+"("+email+")");
 		}
 		//close file
-		readFile.close();
+		  readFile.close();
 	}
 
 }

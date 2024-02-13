@@ -10,7 +10,7 @@ public class Lab1201 {
 			readFile.next();
 			String email = readFile.next().toUpperCase();
 			System.out.println(lname+"."+fname+" ("+email+")");
-		}
+		 }
 
 	}
 
